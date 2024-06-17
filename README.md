@@ -28,6 +28,41 @@ git clone https://github.com/Y1-Bit/Hangman-Game.git
 cd Hangman-Game
 ```
 
+
+### Install virtualenv
+
+```bash
+pip install virtualenv
+```
+
+
+### Create a virtual environment inside your project
+
+```bash
+virtualenv .venv
+```
+
+### Activate the virtual environment
+
+On Mac/Linux
+
+```bash
+. .venv/bin/activate
+```
+
+on Windows (in CMD),
+
+```bash
+.venv/Scripts/activate.bat
+```
+
+on Windows (in PowerShell),
+
+```bash
+.venv/Scripts/Activate.ps1
+```
+
+
 ### Install Dependencies
 ```bash
 pip install -r requirements.txt
