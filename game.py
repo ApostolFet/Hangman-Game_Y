@@ -1,7 +1,6 @@
 import random
-from colorama import Fore, init
+from colorama import Fore
 
-init(autoreset=True)
 
 class Hangman:
     def __init__(self, word_list: list[str], stages: list[str]) -> None:
