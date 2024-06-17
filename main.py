@@ -1,6 +1,7 @@
-from game import Hangman
-from constants import STAGES
 from colorama import init
+
+from constants import STAGES
+from game import Hangman
 
 
 def get_wordlist() -> list[str]:
