@@ -1,23 +1,23 @@
 import random
 from colorama import Fore, init
-from constants import STAGES
 
 init(autoreset=True)
 
 class Hangman:
-    def __init__(self, word_list: list[str]) -> None:
+    def __init__(self, word_list: list[str], stages: list[str]) -> None:
         self.word_list: list[str] = word_list
+        self.stages: list[str] = stages
         self.word: str = ""
         self.guessed_letters: list[str] = []
         self.mistake_letters: list[str] = []
-        self.max_errors: int = len(STAGES) - 1
+        self.max_errors: int = len(stages) - 1
         self.game_over: bool = False
 
     def get_random_word(self) -> str:
         return random.choice(self.word_list)
 
     def display_hangman(self) -> None:
-        print(STAGES[len(self.mistake_letters)])
+        print(self.stages[len(self.mistake_letters)])
 
     def display_word(self) -> None:
         display: str = "".join(

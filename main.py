@@ -1,4 +1,5 @@
 from game import Hangman
+from constants import STAGES
 
 
 def get_wordlist() -> list[str]:
@@ -8,7 +9,7 @@ def get_wordlist() -> list[str]:
 
 def main() -> None:
     word_list: list[str] = get_wordlist()
-    hangman = Hangman(word_list)
+    hangman = Hangman(word_list, STAGES)
     hangman.launch()
 
 
