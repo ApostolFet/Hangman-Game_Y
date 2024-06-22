@@ -1,7 +1,7 @@
 from colorama import init
 
 from constants import STAGES
-from game import Hangman
+from game import launch
 
 
 def get_wordlist() -> list[str]:
@@ -12,8 +12,7 @@ def get_wordlist() -> list[str]:
 def main() -> None:
     init(autoreset=True)
     word_list: list[str] = get_wordlist()
-    hangman = Hangman(word_list, STAGES)
-    hangman.launch()
+    launch(STAGES, word_list)
 
 
 if __name__ == "__main__":
